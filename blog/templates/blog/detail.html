@@ -1,0 +1,11 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<h1 class="text-center mt-5" id="blogdetailtitle">{{ blog.title }}</h1>
+
+<h5 class="text-center text-muted mb-5">{{ blog.date|date:'F jS Y' }}</h5>
+
+{{ blog.blogentry|safe }}
+{% endblock %}
